@@ -27,7 +27,9 @@ Asistentes.listarAsistentes = function (result) {
             console.log("error al consultar", err);
         } else {
             console.log("Asistentes obtenidos", res);
+            result(null, res);
         }
-    }
-    )
+    })
 }
+
+module.exports = Asistentes;
