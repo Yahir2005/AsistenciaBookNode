@@ -32,4 +32,16 @@ Asistentes.listarAsistentes = function (result) {
     })
 }
 
+Asistentes.Registrar = function (visitanteNew,Result){
+    dbConn.query("INSERT INTO Asistentes SET?",visitanteNew,function(err,res){
+        if(err){
+            console.log("error Asistente: ",err);
+            result(err,null);
+        }else{
+            console.log(res,insertId);
+            result(null,res.insertId);
+        }
+    });
+}
+
 module.exports = Asistentes;
