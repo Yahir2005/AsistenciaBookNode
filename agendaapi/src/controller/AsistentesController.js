@@ -17,3 +17,19 @@ exports.listarAsistentes = function (req, res) {
         }
     });
 };
+
+exports.RegistrarAsistente = function(req,res){
+    const visitanteNew = new Asistentes(req.body);
+    if(req.body.contructor === Object && Object.keys(req.body).length ==0 ){
+        res.status(404).send({error: true, message: "Ingrese todos los campos requeridos"});
+    }else{
+        Asistentes.RegistrarAsistente(visitanteNew, function(err, visitante){
+            respuestaRetorno.status = true;
+            respuestaRetorno.code = 200;
+            respuestaRetorno.message = "Insertado Correctamente";
+            respuestaRetorno.data = Asistentes;
+            res.status(200);
+            res.send(respuestaRetorno);
+        });
+    }
+};

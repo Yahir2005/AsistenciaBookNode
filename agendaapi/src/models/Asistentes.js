@@ -32,7 +32,7 @@ Asistentes.listarAsistentes = function (result) {
     })
 }
 
-Asistentes.Registrar = function (visitanteNew,Result){
+Asistentes.RegistrarAsistente = function (visitanteNew,Result){
     dbConn.query("INSERT INTO Asistentes SET?",visitanteNew,function(err,res){
         if(err){
             console.log("error Asistente: ",err);
