@@ -1,8 +1,3 @@
-/**    IdTipo INT AUTO_INCREMENT PRIMARY KEY,
-    NombreTipo VARCHAR(50) NOT NULL UNIQUE,
-    Descripcion TEXT,
-    Activo BOOLEAN DEFAULT TRUE,
-    FechaCreacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP */
 "use strict";
 
 const dbConn = require("../../config/dbConfig");
