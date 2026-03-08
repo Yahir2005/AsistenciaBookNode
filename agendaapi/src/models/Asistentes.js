@@ -3,7 +3,7 @@
 const dbConn = require("../../config/dbConfig");
 
 const Asistentes = function (asistente) {
-    this.id_asistente = asistente.id_asistente;
+    this.IdAsistente = asistente.IdAsistente;
     this.Nombre = asistente.Nombre;
     this.Apellido = asistente.Apellido;
     this.Email = asistente.Email;
@@ -32,7 +32,7 @@ Asistentes.listarAsistentes = function (result) {
     })
 }
 
-Asistentes.RegistrarAsistente = function (visitanteNew,Result){
+Asistentes.RegistrarAsistente = function (visitanteNew,result){
     dbConn.query("INSERT INTO Asistentes SET?",visitanteNew,function(err,res){
         if(err){
             console.log("error Asistente: ",err);

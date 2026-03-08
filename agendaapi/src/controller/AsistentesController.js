@@ -24,6 +24,7 @@ exports.RegistrarAsistente = function(req,res){
         res.status(404).send({error: true, message: "Ingrese todos los campos requeridos"});
     }else{
         Asistentes.RegistrarAsistente(visitanteNew, function(err, visitante){
+            var respuestaRetorno = new RespuestaBasica();
             respuestaRetorno.status = true;
             respuestaRetorno.code = 200;
             respuestaRetorno.message = "Insertado Correctamente";
