@@ -20,3 +20,5 @@ TiposEventos.listarTiposEventos = function (result){
         }
     });
 }
+
+module.exports = TiposEventos;

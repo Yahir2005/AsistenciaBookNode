@@ -10,7 +10,7 @@ exports.listarTiposEventos = function (req,res){
         } else {
             respuestaRetorno.status = true;
             respuestaRetorno.code = 200;
-            respuestaRetorno.message = "Asistentes obtenidos Tipos Eventos";
+            respuestaRetorno.message = "Datos obtenidos Tipos Eventos";
             respuestaRetorno.data = result;
             res.status(200);
             res.send(respuestaRetorno);
