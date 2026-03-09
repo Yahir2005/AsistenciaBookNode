@@ -1,4 +1,4 @@
-const Eventos = require("../models/TiposEventos");
+const Eventos = require("../models/Eventos");
 const RespuestaBasica = require("../models/Response");
 
 exports.listarEventos =  function (req,res){
